@@ -32,7 +32,7 @@ export async function getStaticProps() {
   return {
     props: {
       events: allEvents,
-      revalidate: 100,
+      revalidate: 10,
     },
   };
 }
