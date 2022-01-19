@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import { Fragment } from 'react/cjs/react.production.min';
+import { Fragment } from 'react';
+import Head from 'next/head';
 import EventList from '../../components/events/EventList';
 import EventSearch from '../../components/events/events-search';
-import { getAllEvents } from '../../dummy-data';
 import { useRouter } from 'next/router';
+import { getAllEvents } from '../../helpers/api-util';
 
-const AllEventsPage = () => {
-  const events = getAllEvents();
+const AllEventsPage = (props) => {
   const router = useRouter();
+  const { events } = props;
 
   const findEventHandler = (year, month) => {
     const fullPath = `/events/${year}/${month}`;
@@ -16,9 +16,33 @@ const AllEventsPage = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>All Events</title>
+        <meta name="description" content="Find a lot of good events" />
+      </Head>
       <EventSearch onSearch={findEventHandler} />
       <EventList items={events} />
     </Fragment>
   );
 };
+
+export async function getStaticProps() {
+  const allEvents = await getAllEvents();
+
+  return {
+    props: {
+      events: allEvents,
+    },
+  };
+}
+
+// export async function getStaticPaths() {
+//   const allEvents = await getAllEvents();
+//   const paths = allEvents.map((event) => ({ params: { slug: event.id } }));
+
+//   return {
+//     paths: paths,
+//     fallback: 'blocking',
+//   };
+// }
 export default AllEventsPage;

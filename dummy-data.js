@@ -31,7 +31,7 @@ const DUMMY_EVENTS = [
   },
   {
     id: 'e4',
-    title: 'Jahed',
+    title: 'Jadhed',
     description:
       'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
     location: 'My Street 12, 10115 Broke City',
@@ -41,26 +41,31 @@ const DUMMY_EVENTS = [
   },
 ];
 
-export function getFeaturedEvents() {
-  return DUMMY_EVENTS.filter((event) => event.isFeatured);
-}
+// const DUMMY_EVENTS = [];
+// fetch(
+//   'https://react-getting-started-ae102-default-rtdb.firebaseio.com/events.json'
+// ).then((data) => DUMMY_EVENTS.push(data));
+
+// export function getFeaturedEvents() {
+//   return DUMMY_EVENTS.filter((event) => event.isFeatured);
+// }
 
 export function getAllEvents() {
   return DUMMY_EVENTS;
 }
 
-export function getFilteredEvents(dateFilter) {
-  const { year, month } = dateFilter;
+// export function getFilteredEvents(dateFilter) {
+//   const { year, month } = dateFilter;
 
-  let filteredEvents = DUMMY_EVENTS.filter((event) => {
-    const eventDate = new Date(event.date);
-    return (
-      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
-    );
-  });
+//   let filteredEvents = DUMMY_EVENTS.filter((event) => {
+//     const eventDate = new Date(event.date);
+//     return (
+//       eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
+//     );
+//   });
 
-  return filteredEvents;
-}
+//   return filteredEvents;
+// }
 
 export function getEventById(id) {
   return DUMMY_EVENTS.find((event) => event.id === id);
