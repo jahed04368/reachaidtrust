@@ -5,10 +5,13 @@ import EventSearch from '../../components/events/events-search';
 import { useRouter } from 'next/router';
 import { getAllEvents } from '../../helpers/api-util';
 import { useRef } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 
 const ContactUs = (props) => {
   const emailInputRef = useRef();
   const contactInputRef = useRef();
+  const [message, setMessage] = useState();
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -29,24 +32,43 @@ const ContactUs = (props) => {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
+    setMessage('Thank you for getting in touch. We will get back to you soon');
   }
-
+  if (message) {
+    return (
+      <div>
+        <br />
+        <h2 className="center">{message}</h2>
+      </div>
+    );
+  }
   return (
     <Fragment>
       <Head>
         <title>All Events</title>
         <meta name="description" content="Find a lot of good events" />
       </Head>
-      <div>
+      <div className="center">
         <h1>The Home Page</h1>
         <form onSubmit={submitFormHandler}>
           <div>
             <label htmlFor="email">Your Email Address</label>
-            <input htmlFor="email" id="email" ref={emailInputRef} />
+            <input
+              required
+              type="email"
+              htmlFor="email"
+              id="email"
+              ref={emailInputRef}
+            />
           </div>
           <div>
             <label htmlFor="contactinfo">Your Feedback</label>
-            <textarea rows="5" id="contactinfo" ref={contactInputRef} />
+            <textarea
+              required
+              rows="5"
+              id="contactinfo"
+              ref={contactInputRef}
+            />
           </div>
           <button>Send Feedback</button>
         </form>
