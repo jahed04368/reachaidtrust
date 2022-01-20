@@ -32,7 +32,7 @@ function handler(req, res) {
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
 
-    res.status(201).json({ message: 'Success!', feedback: newFeedback });
+    res.status(201).json({ message: 'Success!', feedback: contactInfo });
   } else {
     res.status(200).json({
       message: 'this works',
