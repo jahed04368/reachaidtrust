@@ -54,6 +54,7 @@ const ContactUs = (props) => {
           <div>
             <label htmlFor="email">Your Email Address</label>
             <input
+              placeholder="example@gmail.com"
               required
               type="email"
               htmlFor="email"
@@ -65,6 +66,7 @@ const ContactUs = (props) => {
             <label htmlFor="contactinfo">Your Feedback</label>
             <textarea
               required
+              placeholder="Your text here"
               rows="5"
               id="contactinfo"
               ref={contactInputRef}
