@@ -19,7 +19,7 @@ function Navbar() {
                 <div className="flex justify-center items-center flex-shrink-0 ">
                   <Links href="/">
                     <h1 className=" font-bold text-xl cursor-pointer">
-                      Event<span className="text-blue-500">List</span>
+                      Reach Aid<span className="text-blue-500">Trust</span>
                     </h1>
                   </Links>
                 </div>
