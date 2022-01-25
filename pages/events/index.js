@@ -18,8 +18,8 @@ const AllEventsPage = (props) => {
   return (
     <Fragment>
       <Head>
-        <title>All Events</title>
-        <meta name="description" content="Find a lot of good events" />
+        <title>All Projects</title>
+        <meta name="description" content="All Reach Aid Trust Projects" />
       </Head>
       <EventSearch onSearch={findEventHandler} />
       <EventList items={events} />

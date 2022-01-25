@@ -45,8 +45,8 @@ const ContactUs = (props) => {
   return (
     <Fragment>
       <Head>
-        <title>All Events</title>
-        <meta name="description" content="Find a lot of good events" />
+        <title>Contact</title>
+        <meta name="description" content="Contact Reach Aid Trust" />
       </Head>
       <div className="center">
         <h1>The Home Page</h1>

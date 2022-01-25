@@ -34,3 +34,11 @@ ul {
   margin: auto;
   text-align: center;
 }
+.homeinfo {
+  padding: 1rem;
+  margin: 1rem;
+}
+.homeheader {
+  font-size: 2rem;
+  color: darkblue;
+}

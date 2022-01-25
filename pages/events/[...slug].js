@@ -98,7 +98,7 @@ const FilteredEventPage = (props) => {
       <title>Filtered Events</title>
       <meta
         name="description"
-        content={`All Events for ${props.date.month}/${props.date.year}.`}
+        content={`All Reach Aid Trust Projects for ${props.date.month}/${props.date.year}.`}
       />
     </Head>
   );

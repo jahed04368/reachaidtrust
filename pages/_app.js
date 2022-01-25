@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>Next Events</title>
-        <meta name="description" content="NextJS Events" />
+        <title>Reach Aid Trust</title>
+        <meta name="description" content="Reach Aid Trust Projects" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />
