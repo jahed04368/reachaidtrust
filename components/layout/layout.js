@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import MainHeader from './main-header';
 import Navbar from './navbar';
 import classes from './main-header.module.css';
+import Footer from './footer';
 
 function Layout(props) {
   return (
@@ -12,6 +13,7 @@ function Layout(props) {
       <div className={classes.space} />
       {/* </div> */}
       <main>{props.children}</main>
+      <Footer />
     </Fragment>
   );
 }
