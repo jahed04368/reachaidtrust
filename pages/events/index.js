@@ -4,6 +4,7 @@ import EventList from '../../components/events/EventList';
 import EventSearch from '../../components/events/events-search';
 import { useRouter } from 'next/router';
 import { getAllEvents } from '../../helpers/api-util';
+import classes from '../../components/layout/main-header.module.css';
 
 const AllEventsPage = (props) => {
   const router = useRouter();

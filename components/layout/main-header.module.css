@@ -6,6 +6,22 @@
   padding: 1rem 10%;
   height: 5rem;
   background-color: #202020;
+  /* margin: 5rem; */
+}
+.space {
+  padding: 3rem;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: #a6c3e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  /* padding: 4rem; */
+  /* height: 80px; */
 }
 
 .logo {

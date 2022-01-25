@@ -4,7 +4,7 @@ import { getFeaturedEvents } from '../helpers/api-util';
 
 const HomePage = (props) => {
   return (
-    <div>
+    <div id="home">
       <Head>
         <title>Next Js Events</title>
         <meta name="description" content="Find a lot of good events" />
