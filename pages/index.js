@@ -12,7 +12,7 @@ const HomePage = (props) => {
 
       <div className="center homeinfo">
         <p>
-          Eget aliquet nibh praesent tristique magna sit amet purus gravida. Ut
+          Eget aliquet jahed nibh praesent tristique magna sit amet purus gravida. Ut
           sem nulla pharetra diam sit amet nisl suscipit. Risus feugiat in ante
           metus dictum at. Ipsum nunc aliquet bibendum enim facilisis gravida.
           Auctor eu augue ut lectus arcu bibendum at. Sit amet mattis vulputate
