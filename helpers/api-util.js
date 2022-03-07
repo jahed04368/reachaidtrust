@@ -1,11 +1,26 @@
+import data from '../reach-aid-all-projects'
+// Get data through API
+// export async function getAllEvents() {
+//   const response = await fetch(
+//     'https://react-getting-started-ae102-default-rtdb.firebaseio.com/events.json'
+//   );
+//   const data = await response.json();
+
+//   const events = [];
+
+//   for (const key in data) {
+//     events.push({
+//       id: key,
+//       ...data[key],
+//     });
+//   }
+//   return events;
+// }
+
+// Get data through js file hardcoded 
+
 export async function getAllEvents() {
-  const response = await fetch(
-    'https://react-getting-started-ae102-default-rtdb.firebaseio.com/events.json'
-  );
-  const data = await response.json();
-
   const events = [];
-
   for (const key in data) {
     events.push({
       id: key,
@@ -14,7 +29,6 @@ export async function getAllEvents() {
   }
   return events;
 }
-
 export async function getFeaturedEvents() {
   const allEvents = await getAllEvents();
   return allEvents.filter((event) => event.isFeatured);
